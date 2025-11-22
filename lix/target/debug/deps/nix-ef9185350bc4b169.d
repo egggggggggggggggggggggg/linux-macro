@@ -1,0 +1,13 @@
+/home/johnnywu/Documents/linux-macro/lix/target/debug/deps/nix-ef9185350bc4b169.d: /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/lib.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/macros.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/errno.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/fcntl.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/mod.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/signal.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/sysinfo.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/time.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/unistd.rs
+
+/home/johnnywu/Documents/linux-macro/lix/target/debug/deps/libnix-ef9185350bc4b169.rmeta: /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/lib.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/macros.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/errno.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/fcntl.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/mod.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/signal.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/sysinfo.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/time.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/unistd.rs
+
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/lib.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/macros.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/errno.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/fcntl.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/mod.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/signal.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/sysinfo.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/sys/time.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.29.0/src/unistd.rs:

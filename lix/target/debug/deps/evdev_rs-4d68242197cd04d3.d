@@ -1,0 +1,11 @@
+/home/johnnywu/Documents/linux-macro/lix/target/debug/deps/evdev_rs-4d68242197cd04d3.d: /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/lib.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/macros.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/device.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/enums.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/logging.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/uinput.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/util.rs
+
+/home/johnnywu/Documents/linux-macro/lix/target/debug/deps/libevdev_rs-4d68242197cd04d3.rmeta: /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/lib.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/macros.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/device.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/enums.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/logging.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/uinput.rs /home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/util.rs
+
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/lib.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/macros.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/device.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/enums.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/logging.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/uinput.rs:
+/home/johnnywu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/evdev-rs-0.6.3/src/util.rs:
