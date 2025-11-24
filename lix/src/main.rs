@@ -1,13 +1,6 @@
 use std::collections::HashMap;
 use std::fs::File;
 use std::hash::Hash;
-fn save_events_to_file(events: &Vec<RecordedEvent>) -> std::io::Result<()> {
-    let file = File::create("macro.json")?;
-    serde_json::to_writer(file, events)?;
-    Ok(())
-}
-use std::path::Path;
-use std::time::Instant;
 
 use evdev_rs::Device;
 use evdev_rs::ReadFlag;
@@ -15,10 +8,13 @@ use evdev_rs::enums::EventCode;
 use once_cell::sync::Lazy;
 use serde::{Deserialize, Serialize};
 use serde_json;
+use std::path::Path;
 use std::time::Duration;
+use std::time::Instant;
 use uinput::event::Code;
 use uinput::event::keyboard::Key;
 use uinput::event::{Event, keyboard};
+
 #[derive(Debug, Deserialize, Serialize)]
 struct RecordedEvent {
     timestamp_ms: u128,
@@ -29,7 +25,7 @@ struct RecordedEvent {
 const BREAK: EventCode = EventCode::EV_KEY(evdev_rs::enums::EV_KEY::KEY_KPMINUS);
 const START: EventCode = EventCode::EV_KEY(evdev_rs::enums::EV_KEY::KEY_KPPLUS);
 const REPLAY: EventCode = EventCode::EV_KEY(evdev_rs::enums::EV_KEY::KEY_STOPCD);
-const LOOP_ITERATION: i32 = 10;
+const LOOP_ITERATION: i32 = 1;
 static KEY_MAP: Lazy<HashMap<u16, Key>> = Lazy::new(|| {
     let mut m = HashMap::new();
 
@@ -40,14 +36,26 @@ static KEY_MAP: Lazy<HashMap<u16, Key>> = Lazy::new(|| {
 
     m
 });
+//should probably fix this later but
+const SAVE_NAME: &str = "mushR";
+const FILE_PATHS: [&str; 6] = [
+    "macros/mushL.json",
+    "macros/mushR.json",
+    "macros/mushL.json",
+    "macros/mushR.json",
+    "macros/mushL.json",
+    "macros/mushR.json",
+];
 
 //if i ever need to ill move everything away from main
 //should proably have a more robust event file path querying system
+fn save_events_to_file(events: &Vec<RecordedEvent>) -> std::io::Result<()> {
+    let file = File::create(format!("macros/{}.json", SAVE_NAME))?;
+    serde_json::to_writer(file, events)?;
+    Ok(())
+}
 fn main() {
-    unsafe { std::env::set_var("RUST_BACKTRACE", "FULL") };
     let d = Device::new_from_path("/dev/input/event2").unwrap();
-    //only start recoding when told to
-    let file_paths = vec!["macro.json"];
     let mut events: Vec<RecordedEvent> = vec![];
     loop {
         //temporarily loop to listen to what keys to start pressing
@@ -57,7 +65,7 @@ fn main() {
                 START => break,
                 REPLAY => {
                     println!("Starting replay");
-                    looped_replay(Some(LOOP_ITERATION), file_paths);
+                    looped_replay(Some(LOOP_ITERATION), FILE_PATHS.to_vec());
                     //this probably the dumbest way to get out of the loop
                     panic!("Finished playing the macro");
                 }
@@ -146,6 +154,11 @@ where
         Some(count) => {
             for _ in 0..count {
                 replay_macro(&file_path, &mut device, &preloaded);
+                //add a small offset to account for falling in void
+                device.press(&Key::D);
+                std::thread::sleep(Duration::from_secs(1));
+                device.release(&Key::D);
+                std::thread::sleep(Duration::from_secs(4));
             }
         }
         None => loop {
@@ -184,8 +197,6 @@ fn replay_events(events: &[ReplayableEvent], keyboard: &mut uinput::Device) {
     for event in events {
         let delay_ms = event.timestamp_ms - last_timestamp;
         last_timestamp = event.timestamp_ms;
-        //idk if this will ever happen but if delay_ms ever breaks the u64 cap
-        //itll break the sleep line
         std::thread::sleep(Duration::from_millis(delay_ms.try_into().unwrap()));
         let key = event.key;
         match event.value {
